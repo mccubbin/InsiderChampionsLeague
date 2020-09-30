@@ -80,20 +80,17 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div>
+                    Insider Champions League Stats
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <ul>
+                    <li><a href="/stats/1">Week 1</a></li>
+                    <li><a href="/stats/2">Week 2</a></li>
+                    <li><a href="/stats/3">Week 3</a></li>
+                    <li><a href="/stats/4">Week 4</a></li>
+                    <li><a href="/stats/5">Week 5</a></li>
+                </ul>
             </div>
         </div>
     </body>

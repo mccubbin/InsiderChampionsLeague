@@ -38,5 +38,10 @@ class VerifyCsrfToken extends Middleware
         if (\App\Match::count() == 0) {
             factory(\App\Match::class, 10)->create();
         }
+
+        // create stats for each team for every match
+        if (\App\TeamMatch::count() == 0) {
+            factory(\App\TeamMatch::class, 20)->create();
+        }
     }
 }

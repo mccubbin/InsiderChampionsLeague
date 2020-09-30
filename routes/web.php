@@ -25,4 +25,4 @@ Route::resource('/matches', 'MatchController');
 
 Route::resource('/teammatches', 'TeamMatchController');
 
-Route::get('/stats', 'TeamMatchController@stats')->name('stats');
+Route::get('/stats/{week}', 'TeamMatchController@stats')->name('stats');

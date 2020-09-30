@@ -18,6 +18,20 @@ class TeamMatchController extends Controller
         return view('teammatch.index')->with('teammatches', $teamMatches);
     }
 
+    public function stats($week)
+    {
+        $teamMatches = \App\TeamMatch
+            ::join('matches', 'matches.id', '=', 'team_matches.match_id')
+            ->where('matches.week', '<=', $week)
+            ->orderBy('matches.week', 'desc')
+            ->orderBy('matches.id', 'asc')
+            ->get();
+
+        return view('teammatch.stats')
+            ->with('teammatches', $teamMatches)
+            ->with('week', $week);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
