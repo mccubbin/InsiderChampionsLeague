@@ -22,5 +22,10 @@ class VerifyCsrfToken extends Middleware
         //
     ];
 
-
+    public function terminate()
+    {
+        if (\App\User::count() == 0) {
+            factory(\App\User::class, 10)->create();
+        }
+    }
 }
