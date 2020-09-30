@@ -24,11 +24,19 @@ class VerifyCsrfToken extends Middleware
 
     public function terminate()
     {
+        // create 10 users
         if (\App\User::count() == 0) {
             factory(\App\User::class, 10)->create();
         }
+
+        // create 4 teams
         if (\App\Team::count() == 0) {
             factory(\App\Team::class, 4)->create();
+        }
+
+        // create 5 matches among the 4 teams
+        if (\App\Match::count() == 0) {
+            factory(\App\Match::class, 5)->create();
         }
     }
 }

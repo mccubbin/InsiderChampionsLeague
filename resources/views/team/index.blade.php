@@ -4,6 +4,12 @@
     @parent
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
 
+    <script>
+        window.onload = function() {
+            var test = $('#x').text();
+        }
+    </script>
+
 @endsection
 
 
@@ -20,9 +26,9 @@
 
         <h3 class="text-center mb-4">Teams</h3>
 
-        <table id="sortable" class="table table-bordered">
+        <table class="table table-bordered">
             <tr class="thead">
-                <th>Id</th>
+                <th id="x">Id</th>
                 <th>TeamName</th>
             </tr>
 
