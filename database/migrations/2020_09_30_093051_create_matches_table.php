@@ -19,6 +19,7 @@ class CreateMatchesTable extends Migration
             $table->foreign('team_id1')->references('id')->on('teams');
             $table->unsignedBigInteger('team_id2');
             $table->foreign('team_id2')->references('id')->on('teams');
+            $table->unsignedBigInteger('week');
             $table->timestamps();
         });
     }

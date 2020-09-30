@@ -34,9 +34,9 @@ class VerifyCsrfToken extends Middleware
             factory(\App\Team::class, 4)->create();
         }
 
-        // create 5 matches among the 4 teams
+        // create 10 matches among the 4 teams
         if (\App\Match::count() == 0) {
-            factory(\App\Match::class, 5)->create();
+            factory(\App\Match::class, 10)->create();
         }
     }
 }

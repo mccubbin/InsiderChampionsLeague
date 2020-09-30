@@ -50,19 +50,19 @@
         <table id="sortable" class="table table-bordered">
             <tr class="thead">
                 <th></th>
-                <th>Id</th>
+                <th>Match Id</th>
                 <th>Week</th>
-                <th>Team 1</th>
-                <th>Team 2</th>
+                <th>Team</th>
+                <th>Points</th>
             </tr>
 
-            @foreach($matches as $match)
+            @foreach($teammatches as $teammatch)
             <tr class="trow">
-                <td><input type="radio" name="taskRadio" value="{{ $match->id }}" onclick="updateButtonUrls()"></td>
-                <td>{{ $match->id }}</td>
-                <td>{{ $match->week }}</td>
-                <td>{{ $match->team1->name }}</td>
-                <td>{{ $match->team2->name }}</td>
+                <td><input type="radio" name="taskRadio" value="{{ $teammatch->id }}" onclick="updateButtonUrls()"></td>
+                <td>{{ $teammatch->match->id }}</td>
+                <td>{{ $teammatch->match->week }}</td>
+                <td>{{ $teammatch->team->name }}</td>
+                <td>{{ $teammatch->points }}</td>
             </tr>
             @endforeach
         </table>

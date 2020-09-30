@@ -24,5 +24,6 @@ $factory->define(Match::class, function (Faker $faker) {
     return [
         'team_id1' => $team1,
         'team_id2' => $team2,
+        'week' => $faker->numberBetween(1, 5),
     ];
 });

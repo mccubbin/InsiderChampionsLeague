@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Match;
+use App\TeamMatch;
 use Illuminate\Http\Request;
 
-class MatchController extends Controller
+class TeamMatchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class MatchController extends Controller
      */
     public function index()
     {
-        $matches = \App\Match::orderBy('week', 'asc')->get();
-        return view('match.index')->with('matches', $matches);
+        $teamMatches = \App\TeamMatch::get();
+        return view('teammatch.index')->with('teammatches', $teamMatches);
     }
 
     /**
@@ -42,10 +42,10 @@ class MatchController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Match  $match
+     * @param  \App\TeamMatch  $teamMatch
      * @return \Illuminate\Http\Response
      */
-    public function show(Match $match)
+    public function show(TeamMatch $teamMatch)
     {
         //
     }
@@ -53,10 +53,10 @@ class MatchController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Match  $match
+     * @param  \App\TeamMatch  $teamMatch
      * @return \Illuminate\Http\Response
      */
-    public function edit(Match $match)
+    public function edit(TeamMatch $teamMatch)
     {
         //
     }
@@ -65,10 +65,10 @@ class MatchController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Match  $match
+     * @param  \App\TeamMatch  $teamMatch
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Match $match)
+    public function update(Request $request, TeamMatch $teamMatch)
     {
         //
     }
@@ -76,10 +76,10 @@ class MatchController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Match  $match
+     * @param  \App\TeamMatch  $teamMatch
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Match $match)
+    public function destroy(TeamMatch $teamMatch)
     {
         //
     }

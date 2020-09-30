@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/teams', 'TeamController');
 
 Route::resource('/matches', 'MatchController');
+
+Route::resource('/teammatches', 'TeamMatchController');
+
+Route::get('/stats', 'TeamMatchController@stats')->name('stats');
